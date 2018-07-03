@@ -1,0 +1,60 @@
+{
+  "name": "@webdollar/user-interface-webdollar",
+  "version": "0.0.4",
+  "description": "User Interface for WebDollar",
+  "main": "index.js",
+  "scripts": {
+    "open_browser": "node src/open-browser",
+    "build_browser": "webpack --config build/webpack.browser-frontend.config.js",
+    "build_user_interface": "webpack --config build/webpack.browser.config.js",
+    "build": "npm run build_frontend && npm run build_user_interface",
+    "test": "npm run build_frontend && npm run open_browser",
+    "dev": "webpack-dev-server --config=./build/webpack.browser-hot-loader.config.js --content-base dist_bundle --hot --inline"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WebDollar/User-Interface-WebDollar.git"
+  },
+  "keywords": [
+    "WebDollar",
+    "User Interface",
+    "UI",
+    "UX",
+    "User Experience"
+  ],
+  "author": "WebDollar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WebDollar/User-Interface-WebDollar/issues"
+  },
+  "homepage": "https://github.com/WebDollar/User-Interface-WebDollar#readme",
+  "dependencies": {
+    "clipboard": "^1.7.1",
+    "uuid": "^3.2.1",
+    "v-clipboard": "*",
+    "vue": "^2.5.13",
+    "vue-slider-component": "*"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-module-alias": "^1.6.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-es2017": "^6.24.1",
+    "compression-webpack-plugin": "^1.1.3",
+    "css-loader": "^0.28.9",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "friendly-errors-webpack-plugin": "^1.6.1",
+    "open-browser-webpack-plugin": "0.0.5",
+    "opn": "^5.1.0",
+    "source-map": "^0.7.0",
+    "vue-hot-reload-loader": "^0.1.5",
+    "vue-loader": "^13.7.0",
+    "vueify": "^9.4.1",
+    "file-saver": "*",
+    "webpack": "^3.10.0",
+    "webpack-bundle-analyzer": "^2.9.2",
+    "webpack-dev-server": "^2.11.1",
+    "webpack-hot-middleware": "^2.21.0",
+    "webpack-merge": "^4.1.1"
+  }
+}
